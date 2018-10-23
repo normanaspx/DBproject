@@ -1,4 +1,6 @@
 #1 git status - ver que archivos fueron modificados o agregados
 #2 git add -A - agrega todos 
 #3 git commit -m "Mensaje del cambio que realice" - Verifico el cambio 
-#4 git push - Actualiza el repositorio
+#4 git push - Actualiza el repositorio 
+   sino funciona usar: git push origin master
+	
