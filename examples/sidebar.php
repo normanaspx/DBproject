@@ -37,6 +37,24 @@
 		</a>
 	   </li>
 	   <li>
+		<a href="#">
+		  <i class="now-ui-icons users_single-02"></i>
+		  <p><strong>Clientes</strong> </p>
+		</a>
+	   </li>
+	   <li>
+		<a href="#">
+		  <i class="now-ui-icons users_circle-08"></i>
+		  <p><strong>Usuarios</strong> </p>
+		</a>
+	   </li>
+	   <li>
+		<a href="#">
+		  <i class="now-ui-icons ui-1_simple-add"></i>
+		  <p><strong>Entradas</strong> </p>
+		</a>
+	   </li>
+	   <li>
 		<a href="./icons.html">
 		  <i class="now-ui-icons education_atom"></i>
 		  <p>Icons</p>

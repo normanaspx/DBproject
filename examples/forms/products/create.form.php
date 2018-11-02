@@ -29,6 +29,7 @@
 					<button class="btn" type="button" name="button">Grabar</button>
 				</div>
 			</form>
+			<br>
 	 	</div>
 	 </div>
     </div>
