@@ -25,5 +25,8 @@
 	.card{
 		font-size: 15px;
 	}
+	.sidebar-wrapper{
+		font-size: 18px;
+	}
   </style>
 </head>
