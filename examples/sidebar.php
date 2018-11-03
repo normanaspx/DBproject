@@ -19,7 +19,7 @@
 		</a>
 	   </li>
 	   <li>
-		<a href="#">
+		<a href="./facturas.list.php">
 		  <i class="now-ui-icons files_paper"></i>
 		  <p> <strong>Facturar</strong></p>
 		</a>
