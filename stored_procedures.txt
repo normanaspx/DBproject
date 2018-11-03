@@ -1,6 +1,6 @@
 DELIMITER //
  
-CREATE PROCEDURE Productos_bodega()
+CREATE PROCEDURE GetAllBodegas()
    
 BEGIN
    SELECT *  FROM bodega;
@@ -11,7 +11,7 @@ DELIMITER
 -------------------------------------
 DELIMITER //
  
-CREATE PROCEDURE Datos_cliente()
+CREATE PROCEDURE GetAllCustomers()
    
 BEGIN
    SELECT *  FROM cliente;
@@ -23,7 +23,7 @@ DELIMITER
 --------------------------------------
 DELIMITER //
  
-CREATE PROCEDURE Datos_proveedor()
+CREATE PROCEDURE GetAllProviders()
    
 BEGIN
    SELECT *  FROM proveedor;
@@ -32,3 +32,13 @@ END //
  
 DELIMITER
 --------------------------------------
+DELIMITER //
+ 
+CREATE PROCEDURE GetAllProducts()
+   
+BEGIN
+   SELECT *  FROM producto;
+   
+END //
+ 
+DELIMITER
