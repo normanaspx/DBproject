@@ -37,6 +37,30 @@
                     </td>
               </form>
 			  </tr>
+				<?php
+			 	include'connection.php';
+	 		$querySelect = "select * from bodega";
+	 		$resultado = mysqli_query($conector, $querySelect);
+	 		if($resultado) {
+		 		$fila = " ";
+		 		  while($fila){
+		 			$fila = mysqli_fetch_array($resultado);
+		 			if($fila['DESCRIPCION']!=''){
+						echo "<tr>
+			 					<td>". $fila['ID_BODEGA']. "</td>
+			 					<td>" .$fila['DESCRIPCION']. "</td>
+			 					<td>". $fila['UBICACION']. "</td>
+								<td><a href=\"#\">Editar</a></td>
+								<td><a href=\"#\">Eliminar</a></td>
+			 				</tr>";
+					}
+		 		  }
+	 			mysqli_close($conector);
+	 		}else
+			 {
+	 			mysqli_close($conector);
+	 		}
+		?>
 		  </tbody>
 		</table>
 	   </div>

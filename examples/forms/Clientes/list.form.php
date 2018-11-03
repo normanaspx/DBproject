@@ -38,6 +38,32 @@
                     <input class="btn" type="button" type="button" value="Editar" onClick=" window.location.href='clientes.edit.php' ">
                     </td>
 			  </tr>
+				<?php
+			 	include'connection.php';
+	 		$querySelect = "select * from cliente";
+	 		$resultado = mysqli_query($conector, $querySelect);
+	 		if($resultado) {
+		 		$fila = " ";
+		 		  while($fila){
+		 			$fila = mysqli_fetch_array($resultado);
+		 			if($fila['NOMBRES']!=''){
+						echo "<tr>
+			 					<td>". $fila['ID_CLIENTE']. "</td>
+			 					<td>" .$fila['NOMBRES']. "</td>
+								 <td>". $fila['APELLIDOS']. "</td>
+								 <td>". $fila['DIRECCION']. "</td>
+								 <td>". $fila['NIT']. "</td>
+								<td><a href=\"#\">Editar</a></td>
+								<td><a href=\"#\">Eliminar</a></td>
+			 				</tr>";
+					}
+		 		  }
+	 			mysqli_close($conector);
+	 		}else
+			 {
+	 			mysqli_close($conector);
+	 		}
+		?>
 		  </tbody>
 		</table>
 	   </div>
