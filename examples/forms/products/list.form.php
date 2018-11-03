@@ -50,7 +50,6 @@
 	 			mysqli_close($conector);
 	 		}else
 			 {
-	 			echo'fallo';
 	 			mysqli_close($conector);
 	 		}
 		?>

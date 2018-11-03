@@ -1,28 +1,3 @@
-<?php
-	include'connection.php';
-	if(isset($_POST['button'])){
-		$querySelect = "CALL `GetAllProducts`()";
-		$resultado = mysqli_query($conector, $querySelect);
-		if($resultado) {
-		$fila = "sdfsf";
-		  while($fila){
-			$fila = mysqli_fetch_array($resultado);
-			echo "<tr class=\"\">
-					<td>". $fila['id_producto']. "</td>
-					<td>". $fila['nombre']. "</td>
-					<td>" .$fila['descripcion']. "</td>
-					<td>". $fila['precio']. "</td>
-				</tr>";
-		  }
-
-			mysqli_close($conector);
-		}else {
-			echo'fallo';
-		mysqli_close($conector);
-		}
-	}
-
- ?>
 <div class="row">
   <div class="col-md-12">
     <div class="card">
