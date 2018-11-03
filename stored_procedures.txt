@@ -1,0 +1,34 @@
+DELIMITER //
+ 
+CREATE PROCEDURE Productos_bodega()
+   
+BEGIN
+   SELECT *  FROM bodega;
+   
+END //
+ 
+DELIMITER
+-------------------------------------
+DELIMITER //
+ 
+CREATE PROCEDURE Datos_cliente()
+   
+BEGIN
+   SELECT *  FROM cliente;
+   
+END //
+ 
+DELIMITER
+
+--------------------------------------
+DELIMITER //
+ 
+CREATE PROCEDURE Datos_proveedor()
+   
+BEGIN
+   SELECT *  FROM proveedor;
+   
+END //
+ 
+DELIMITER
+--------------------------------------
