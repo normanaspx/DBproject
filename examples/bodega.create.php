@@ -18,7 +18,7 @@
 
 		<!-- Forms -->
 		<div class="content">
-			<?php include('forms/Bodega/list.form.php'); ?>
+			<?php include('forms/Bodega/create.form.php'); ?>
 		</div>
 
 		<!-- Footer -->
