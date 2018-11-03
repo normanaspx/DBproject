@@ -1,3 +1,28 @@
+<?php
+	include'connection.php';
+	if(isset($_POST['button'])){
+		$querySelect = "CALL `GetAllProducts`()";
+		$resultado = mysqli_query($conector, $querySelect);
+		if($resultado) {
+		$fila = "sdfsf";
+		  while($fila){
+			$fila = mysqli_fetch_array($resultado);
+			echo "<tr class=\"\">
+					<td>". $fila['id_producto']. "</td>
+					<td>". $fila['nombre']. "</td>
+					<td>" .$fila['descripcion']. "</td>
+					<td>". $fila['precio']. "</td>
+				</tr>";
+		  }
+
+			mysqli_close($conector);
+		}else {
+			echo'fallo';
+		mysqli_close($conector);
+		}
+	}
+
+ ?>
 <div class="row">
   <div class="col-md-12">
     <div class="card">
@@ -14,19 +39,19 @@
 				<div class="form-row">
 			       <div class="form-group col-md-4">
 			         <label for="inputEmail4"> <strong>Nombre</strong></label>
-			         <input type="text" class="form-control" id="inputEmail4" placeholder="">
+			         <input type="text" class="form-control" id="inputEmail4" placeholder="" name="name">
 			       </div>
 			       <div class="form-group col-md-4">
 			         <label for="inputPassword4"> <strong>Descripcion</strong></label>
-			         <input type="text" class="form-control" id="inputPassword4" placeholder="">
+			         <input type="text" class="form-control" id="inputPassword4" placeholder="" name="description">
 			       </div>
 				  <div class="form-group col-md-4">
 				    <label for="inputPassword4"> <strong>Precio</strong></label>
-				    <input type="text" class="form-control" id="inputPassword4" placeholder="">
+				    <input type="text" class="form-control" id="inputPassword4" placeholder=""name="price">
 				  </div>
 			     </div>
 				<div class="form-row" style="float:center;">
-					<button class="btn" type="button" name="button">Grabar</button>
+					<button class="btn" type="submit" name="button">Grabar</button>
 				</div>
 			</form>
 			<br>

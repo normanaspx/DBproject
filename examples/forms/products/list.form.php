@@ -29,13 +29,31 @@
 		    </th>
 		  </thead>
 		  <tbody>
-			  <tr>
-			  	<td>Mochila</td>
-				<td>Descripcion de mochila</td>
-				<td>Q150.00</td>
-				<td><a href="products.edit.php">Editar</a></td>
-				<td><a href="#">Eliminar</a></td>
-			  </tr>
+		 <?php
+			 	include'connection.php';
+	 		$querySelect = "CALL `GetAllProducts`()";
+	 		$resultado = mysqli_query($conector, $querySelect);
+	 		if($resultado) {
+		 		$fila = " ";
+		 		  while($fila){
+		 			$fila = mysqli_fetch_array($resultado);
+		 			if($fila['NOMBRE']!=''){
+						echo "<tr>
+			 					<td>". $fila['NOMBRE']. "</td>
+			 					<td>" .$fila['DESCRIPCION']. "</td>
+			 					<td>Q". $fila['PRECIO']. "</td>
+								<td><a href=\"#\">Editar</a></td>
+								<td><a href=\"#\">Eliminar</a></td>
+			 				</tr>";
+					}
+		 		  }
+	 			mysqli_close($conector);
+	 		}else
+			 {
+	 			echo'fallo';
+	 			mysqli_close($conector);
+	 		}
+		?>
 		  </tbody>
 		</table>
 	   </div>
