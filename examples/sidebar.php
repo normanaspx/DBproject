@@ -43,6 +43,12 @@
 		</a>
 	   </li>
 	   <li>
+		<a href="./providers.list.php">
+		  <i class="now-ui-icons users_single-02"></i>
+		  <p><strong>Proveedores</strong> </p>
+		</a>
+	   </li>
+	   <li>
 		<a href="#">
 		  <i class="now-ui-icons users_circle-08"></i>
 		  <p><strong>Usuarios</strong> </p>
