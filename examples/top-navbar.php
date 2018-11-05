@@ -8,7 +8,7 @@
 		<span class="navbar-toggler-bar bar3"></span>
 	   </button>
 	 </div>
-	 <a class="navbar-brand" href="#pablo">Productos</a>
+	 <a class="navbar-brand"></a>
     </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse"
 	data-target="#navigation" aria-controls="navigation-index"
@@ -30,7 +30,7 @@
 	 </form>
 	 <ul class="navbar-nav">
 	   <li class="nav-item">
-		<a class="nav-link" href="#pablo">
+		<a class="nav-link">
 		  <i class="now-ui-icons media-2_sound-wave"></i>
 		  <p>
 		    <span class="d-lg-none d-md-block">Stats</span>
@@ -51,7 +51,7 @@
 		</div>
 	   </li>
 	   <li class="nav-item">
-		<a class="nav-link" href="#pablo">
+		<a class="nav-link">
 		  <i class="now-ui-icons users_single-02"></i>
 		  <p>
 		    <span class="d-lg-none d-md-block">Account</span>

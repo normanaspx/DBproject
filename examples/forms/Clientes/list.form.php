@@ -6,53 +6,53 @@
 			<i class="now-ui-icons ui-1_simple-add"></i>
 			<p><strong>Nueva</strong></p>
 		</a>
-		<h3 class="title">Listado de facturas</h3>
+		<h3 class="title">Listado de clientes</h3>
 	 </div>
 	 <div class="card-body">
 	   <div class="table-responsive">
 		<table class="table">
 		  <thead class=" text-primary">
 		    <th>
-			 Numero de factura
+			 Nombre
 		    </th>
 		    <th>
-			 Numero de serie
+			 Apellido
 		    </th>
 		    <th>
-			 Fecha
+			 Dirección
 		    </th>
 		    <th>
-			 Cliente
+			 Nit
 		    </th>
 		    <th>
-			 Bodega
+			 Acciones
 		    </th>
 		  </thead>
 		  <tbody>
 			  <tr>
-			  	<td>0001</td>
-				<td>1111</td>
-				<td>01/03/2018</td>
-                <td>Luis Armas</td>
-                <td>Bodega1</td>
+			  	<td>Luis</td>
+				<td>Armas</td>
+				<td>zona 10</td>
+                <td>73215605</td>
+                <td>
+                    <input class="btn" type="button" type="button" value="Editar" onClick=" window.location.href='clientes.edit.php' ">
+                    </td>
 			  </tr>
 				<?php
 			 	include'connection.php';
-	 		$querySelect = "select * from factura";
+	 		$querySelect = "select * from cliente";
 	 		$resultado = mysqli_query($conector, $querySelect);
 	 		if($resultado) {
 		 		$fila = " ";
 		 		  while($fila){
 		 			$fila = mysqli_fetch_array($resultado);
-		 			if($fila['ID_FACTURA']!=''){
+		 			if($fila['NOMBRES']!=''){
 						echo "<tr>
-			 					<td>". $fila['ID_FACTURA']. "</td>
-			 					<td>" .$fila['NUM_FACTURA']. "</td>
-								 <td>". $fila['NUM_SERIE']. "</td>
-								 <td>". $fila['FECHA']. "</td>
-								 <td>". $fila['ID_CLIENTE']. "</td>
-								 <td>". $fila['ID_BODEGA']. "</td>
-								 <td>". $fila['ID_USUARIO']. "</td>
+			 					<td>". $fila['ID_CLIENTE']. "</td>
+			 					<td>" .$fila['NOMBRES']. "</td>
+								 <td>". $fila['APELLIDOS']. "</td>
+								 <td>". $fila['DIRECCION']. "</td>
+								 <td>". $fila['NIT']. "</td>
 								<td><a href=\"#\">Editar</a></td>
 								<td><a href=\"#\">Eliminar</a></td>
 			 				</tr>";
