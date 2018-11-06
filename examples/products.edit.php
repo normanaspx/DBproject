@@ -20,7 +20,7 @@
 		<div class="content">
 			<?php include('forms/products/edit.form.php'); ?>
 		</div>
-
+		<br><br>
 		<!-- Footer -->
 		<?php include'footer.php'; ?>
 	</div>

@@ -1,12 +1,14 @@
 <?php
 	include'connection.php';
-	$name=$_POST['name'];
-	$description=$_POST['description'];
-	$price=$_POST['price'];
-	$insert = "CALL";
-	$resultado = mysqli_query($conector, $insert);
-	mysqli_close($conector);
-	header("Location: ./products.list.php");
+	if(isset($_POST['button'])){
+		$name=$_POST['name'];
+		$description=$_POST['description'];
+		$price=$_POST['price'];
+		$provider=$_POST['provider'];
+		$insert = "CALL `AddProducts`('". $name ."', '". $description ."', '$price' , '$provider')";
+		$resultado = mysqli_query($conector, $insert);
+		mysqli_close($conector);
+	}
  ?>
 <div class="row">
   <div class="col-md-12">
@@ -20,7 +22,7 @@
 		</div>
 	 	<div class="container"><br><br>
 			<!-- Para el grid: https://getbootstrap.com/docs/4.1/components/forms/#layout -->
-			<form>
+			<form method="post">
 				<div class="form-row">
 			       <div class="form-group col-md-6">
 			         <label for="inputEmail4"> <strong>Nombre</strong></label>
@@ -38,7 +40,7 @@
 					</div>
 				  <div class="form-group col-md-6">
 				    <label for="inputPassword4"> <strong>Proveedor</strong></label>
-				    <input type="text" class="form-control" id="inputPassword4" placeholder="" name="description">
+				    <input type="text" class="form-control" id="inputPassword4" placeholder="" name="provider">
 				  </div>
 				</div>
 				<div class="form-row" style="float:center;">
@@ -50,4 +52,4 @@
 	 </div>
     </div>
   </div>
-</div>
+</div><br><br>
