@@ -44,7 +44,7 @@
 				  </div>
 				</div>
 				<div class="form-row" style="float:center;">
-					<button class="btn" type="submit" name="button">Grabar</button>
+					<a href="products.list.php" class="btn" type="submit" name="button">Grabar</a>
 				</div>
 			</form>
 			<br>
