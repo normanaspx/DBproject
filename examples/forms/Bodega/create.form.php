@@ -1,9 +1,13 @@
 <?php
 	include'connection.php';
 	if(isset($_POST['button'])){
+		//siempre verifica si este name del post existe
+		//tambien si da error en otros formularios verifica si esta correcto el stored procedure fue lo primerp que hice viste que no estaba bueno
+		//metodo el del form y tipo de boton
+		//la redireccion no la ha agregado aun solo cuando crea no cambia de vista probalo asi nada mas.
 		$description=$_POST['description'];
 		$ubicacion=$_POST['ubicacion'];
-		$insert = "CALL `AddProducts`('". $description ."', '". $ubicacion ."')";
+		$insert = "CALL `AddBodegas`('". $description ."', '". $ubicacion ."')";
 		$resultado = mysqli_query($conector, $insert);
 		mysqli_close($conector);
 	}
@@ -22,22 +26,19 @@
 	 	<div class="container">
 			 <br><br>
 			<!-- Para el grid: https://getbootstrap.com/docs/4.1/components/forms/#layout -->
-			<form>
+			<form method="post">
 				<div class="form-row">
 				  <div class="form-group col-md-3">
 				    <label for="inputPassword4"> <strong>Descripción</strong></label>
-				    <input type="text" class="form-control" id="inputPassword4" placeholder="">
+				    <input type="text" class="form-control" id="inputPassword4" placeholder="" name="description">
 					</div>
 					<div class="form-group col-md-3 ">
 			         <label for="inputEmail4"><strong>Ubicación</strong></label>
-			         <input type="text" class="form-control" id="inputEmail4" placeholder="">
+			         <input type="text" class="form-control" id="inputEmail4" placeholder="" name="ubicacion">
 			       </div>
-			 </div>
-			
-			 
-			 
+			 </div> 
 			 <div class="form-row" style="float:center;">
-					<button class="btn" type="button" name="button">Guardar</button>
+					<button class="btn" type="submit" name="button">Guardar</button>
 				</div>
 			</form>
 			
