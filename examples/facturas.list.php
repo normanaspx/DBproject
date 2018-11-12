@@ -18,11 +18,10 @@
 
 		<!-- Forms -->
 		<div class="content">
-			<?php include('forms/facturas/list.form.php'); ?>
+			<?php include('forms/facturas/create.form.php'); ?>
 		</div>
 
 		<!-- Footer -->
-		<?php include'footer.php'; ?>
 	</div>
 </div>
 	<!--   Core JS Files   -->
