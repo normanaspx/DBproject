@@ -23,3 +23,12 @@ COMMENT 'lista productos'
 NOT DETERMINISTIC MODIFIES SQL DATA SQL SECURITY DEFINER
 SELECT * FROM  producto
 ---------------------------------------
+CREATE PROCEDURE `AddProveedores`(IN `nombre` VARCHAR(50), IN `ubicacion` VARCHAR(50)) 
+COMMENT 'Agrega proveedores' 
+NOT DETERMINISTIC MODIFIES SQL DATA SQL SECURITY DEFINER 
+INSERT INTO proveedor VALUES(null, nombre, ubicacion)
+
+CREATE PROCEDURE `AddEntrada`(IN `descripcion` VARCHAR(50), IN `cantidad` INT(11), IN `id_producto` INT(11), IN `id_bodega` INT(11)) 
+COMMENT 'Agrega boleta_entrada' 
+NOT DETERMINISTIC MODIFIES SQL DATA SQL SECURITY DEFINER 
+INSERT INTO boleta_entrada VALUES(null, descripcion, cantidad, id_producto, id_bodega)

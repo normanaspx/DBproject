@@ -2,7 +2,7 @@
   <div class="col-md-12">
     <div class="card">
 	 <div class="card-header">
-		<a style="float:right; text-align:center; font-size:20px;" href="./product.create.php">
+		<a style="float:right; text-align:center; font-size:20px;" href="./providers.create.php">
 			<i class="now-ui-icons ui-1_simple-add"></i>
 			<p><strong>Nuevo</strong></p>
 		</a>
@@ -28,7 +28,7 @@
 		  <tbody>
 		 <?php
 			 	include'connection.php';
-	 		$querySelect = "CALL `GetAllProviders`();";
+	 		$querySelect = "select * from proveedor";
 	 		$resultado = mysqli_query($conector, $querySelect);
 	 		if($resultado) {
 		 		$fila = " ";

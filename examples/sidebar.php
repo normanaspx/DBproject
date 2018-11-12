@@ -55,16 +55,13 @@
 		</a>
 	   </li>
 	   <li>
-		<a href="#">
+		<a href="./entradas.list.php">
 		  <i class="now-ui-icons ui-1_simple-add"></i>
 		  <p><strong>Entradas</strong> </p>
 		</a>
 	   </li>
 	   <li>
-		<a href="./icons.html">
-		  <i class="now-ui-icons education_atom"></i>
-		  <p>Icons</p>
-		</a>
+
 	   </li>
 	 </ul>
     </div>
