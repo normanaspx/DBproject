@@ -4,7 +4,7 @@
 		//siempre verifica si este name del post existe
 		//tambien si da error en otros formularios verifica si esta correcto el stored procedure fue lo primerp que hice viste que no estaba bueno
 		//metodo el del form y tipo de boton
-		//la redireccion no la ha agregado aun solo cuando crea no cambia de vista probalo asi nada mas.
+		//la redireccion no la ha agregado aun solo cuando crea no cambia de vista probalo asi nada mas.s
 		$description=$_POST['description'];
 		$ubicacion=$_POST['ubicacion'];
 		$insert = "CALL `AddBodegas`('". $description ."', '". $ubicacion ."')";
