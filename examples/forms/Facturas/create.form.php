@@ -6,26 +6,23 @@
                <i class="now-ui-icons arrows-1_minimal-left"></i>
                <p><strong>Cancelar</strong></p>
             </a>
-            <h3 class="title">Facturacion</h3>
+            <h3 class="title">Facturación</h3>
          </div>
          <div class="container">
             <br><br>
             <!-- Para el grid: https://getbootstrap.com/docs/4.1/components/forms/#layout -->
             <form>
 	               <div class="form-row">
-	                  <div class="form-group col-md-3">
-	                     <label for="inputEmail4"><strong>Numero de factura</strong></label>
-	                     <input type="text" class="form-control" id="inputEmail4" placeholder="">
-	                  </div>
-	                  <div class="form-group col-md-3">
+
+	                  <div class="form-group col-md-4">
 	                     <label for="inputPassword4"> <strong>Numero de serie</strong></label>
-	                     <input type="text" class="form-control" id="inputPassword4" placeholder="">
+	                     <input type="text" class="form-control" id="inputPassword4" placeholder="A18">
 	                  </div>
-	                  <div class="form-group col-md-3">
+	                  <div class="form-group col-md-4">
 	                     <label for="inputPassword4"> <strong>Fecha</strong></label>
 	                     <input type="date" class="form-control" id="inputDate" placeholder="">
 	                  </div>
-	                  <div class="form-group col-md-3 ">
+	                  <div class="form-group col-md-4 ">
 	                     <label for="inputEmail4"><strong>Bodega</strong></label>
 	                     <input type="text" class="form-control" id="inputEmail4" placeholder="">
 	                  </div>
@@ -35,10 +32,10 @@
 	                  <div class="form-row col-md-4">
 	                     <h4 class="title">Agregar cliente</h4>
 	                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-	                     Buscar cliente
+	                     	Buscar cliente
 	                     </button>
 	                     <button type="button" class="btn btn-primary" onclick="addDefault();">
-	                     Consumidor final
+	                     	Consumidor final
 	                     </button>
 	                     <?php include'customer.php' ?>
 	                  </div>

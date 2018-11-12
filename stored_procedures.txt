@@ -1,52 +1,25 @@
-DELIMITER //
-
-CREATE PROCEDURE GetAllBodegas()
-
-BEGIN
-   SELECT *  FROM bodega;
-
-END //
-
-DELIMITER
--------------------------------------
-DELIMITER //
-
-CREATE PROCEDURE GetAllCustomers()
-
-BEGIN
-   SELECT *  FROM cliente;
-
-END //
-
-DELIMITER
-
+CREATE PROCEDURE `GetAllCustomers`()
+COMMENT 'lista clientes'
+NOT DETERMINISTIC MODIFIES SQL DATA SQL SECURITY DEFINER
+SELECT * FROM  cliente
+--------------------------------
+CREATE PROCEDURE `GetAllBodega`()
+COMMENT 'lista bodegas'
+NOT DETERMINISTIC MODIFIES SQL DATA SQL SECURITY DEFINER
+SELECT * FROM  bodega
+--------------------------
+CREATE PROCEDURE `GetAllProviders`()
+COMMENT 'lista productos'
+NOT DETERMINISTIC MODIFIES SQL DATA SQL SECURITY DEFINER
+SELECT * FROM  proveedores
 --------------------------------------
-DELIMITER //
-
-CREATE PROCEDURE GetAllProviders()
-
-BEGIN
-   SELECT *  FROM proveedor;
-
-END //
-
-DELIMITER
+CREATE PROCEDURE `GetAllBoletas`()
+COMMENT 'lista boletas'
+NOT DETERMINISTIC MODIFIES SQL DATA SQL SECURITY DEFINER
+SELECT * FROM  boleta_entrada
 --------------------------------------
-DELIMITER //
-
-CREATE PROCEDURE GetAllProducts()
-
-BEGIN
-   SELECT *  FROM producto;
-
-END //
-
-DELIMITER
+CREATE PROCEDURE `GetAllProducts`()
+COMMENT 'lista productos'
+NOT DETERMINISTIC MODIFIES SQL DATA SQL SECURITY DEFINER
+SELECT * FROM  producto
 ---------------------------------------
-
-DELIMITER //
-CREATE PROCEDURE  AddProduct(name varchar(50), description varchar(50), price decimal, id_proveedor int)
-    BEGIN
-       insert into producto values(null, name, description, price, id_proveedor);
-    END //
-DELIMITER;
