@@ -29,12 +29,12 @@
 			<form method="post">
 				<div class="form-row">
 				  <div class="form-group col-md-3">
-				    <label for="inputPassword4"> <strong>Descripción</strong></label>
-				    <input type="text" class="form-control" id="inputPassword4" placeholder="" name="description">
+				    <label  for="inputPassword4"> <strong>Descripción</strong></label>
+				    <input  required type="text" class="form-control" id="inputPassword4" placeholder="" name="description">
 					</div>
 					<div class="form-group col-md-3 ">
 			         <label for="inputEmail4"><strong>Ubicación</strong></label>
-			         <input type="text" class="form-control" id="inputEmail4" placeholder="" name="ubicacion">
+			         <input required type="text" class="form-control" id="inputEmail4" placeholder="" name="ubicacion">
 			       </div>
 			 </div> 
 			 <div class="form-row" style="float:center;">

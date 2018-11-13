@@ -16,15 +16,15 @@
 
 	                  <div class="form-group col-md-4">
 	                     <label for="inputPassword4"> <strong>Numero de serie</strong></label>
-	                     <input type="text" class="form-control" id="inputPassword4" placeholder="A18">
+	                     <input required type="text" class="form-control" id="inputPassword4" placeholder="A18">
 	                  </div>
 	                  <div class="form-group col-md-4">
 	                     <label for="inputPassword4"> <strong>Fecha</strong></label>
-	                     <input type="date" class="form-control" id="inputDate" placeholder="">
+	                     <input required type="date" class="form-control" id="inputDate" placeholder="">
 	                  </div>
 	                  <div class="form-group col-md-4 ">
 	                     <label for="inputEmail4"><strong>Bodega</strong></label>
-	                     <input type="text" class="form-control" id="inputEmail4" placeholder="">
+	                     <input required type="text" class="form-control" id="inputEmail4" placeholder="">
 	                  </div>
 	               </div>
 	               <hr>
@@ -43,19 +43,19 @@
 				<div class="form-row" id="row">
 					<div class="form-group col-md-3">
 					   <label for="name"><strong>Nombre</strong></label>
-					   <input type="text" class="form-control" id="name" placeholder="">
+					   <input required type="text" class="form-control" id="name" placeholder="">
 					</div>
 					<div class="form-group col-md-3">
 					   <label for="ape"> <strong>Apellido</strong></label>
-					   <input type="text" class="form-control" id="ape" placeholder="">
+					   <input required type="text" class="form-control" id="ape" placeholder="">
 					</div>
 					<div class="form-group col-md-3">
 					   <label for="dir"> <strong>Dirección</strong></label>
-					   <input type="text" class="form-control" id="dir" placeholder="">
+					   <input required type="text" class="form-control" id="dir" placeholder="">
 					</div>
 					<div class="form-group col-md-3 ">
 					   <label for="nit"><strong>Nit</strong></label>
-					   <input type="text" class="form-control" id="nit" placeholder="">
+					   <input required type="text" class="form-control" id="nit" placeholder="">
 					</div>
 				</div>
 	               <hr>

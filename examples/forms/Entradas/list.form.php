@@ -27,6 +27,9 @@
 		    <th>
 			 Acciones
 		    </th>
+				<th>
+			 Acciones
+		    </th>
 		  </thead>
 		  <tbody>
 				<?php
