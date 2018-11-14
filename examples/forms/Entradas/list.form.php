@@ -46,7 +46,7 @@
 								 <td>". $fila['CANTIDAD']. "</td>
 								 <td>". $fila['ID_PRODUCTO']. "</td>
 								 <td>". $fila['ID_BODEGA']. "</td>
-								<td><a href=\"#\">Editar</a></td>
+								<td><a href=\"entradas.edit.php\">Editar</a></td>
 								<td><a href=\"#\">Eliminar</a></td>
 			 				</tr>";
 					}

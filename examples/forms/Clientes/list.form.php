@@ -46,7 +46,7 @@
 								 <td>". $fila['APELLIDOS']. "</td>
 								 <td>". $fila['DIRECCION']. "</td>
 								 <td>". $fila['NIT']. "</td>
-								<td><a href=\"#\">Editar</a></td>
+								<td><a href=\"clientes.edit.php\">Editar</a></td>
 								<td><a href=\"#\">Eliminar</a></td>
 			 				</tr>";
 					}
