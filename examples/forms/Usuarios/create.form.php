@@ -28,27 +28,27 @@
 			<!-- Para el grid: https://getbootstrap.com/docs/4.1/components/forms/#layout -->
 			<form method="post">
 				<div class="form-row">
-				  <div class="form-group col-md-3">
+				  <div class="form-group col-md-4">
 				    <label for="inputPassword4"> <strong>Nombre</strong></label>
 				    <input required type="text" class="form-control" id="inputPassword4" placeholder="" name="nombre">
 					</div>
-                   <div class="form-group col-md-3 ">
+                   <div class="form-group col-md-4 ">
 			         <label for="inputEmail4"><strong>Apellido</strong></label>
 			         <input required type="text" class="form-control" id="inputEmail4" placeholder="" name="direccion">
 			       </div>
-                   <div class="form-group col-md-3 ">
+                   <div class="form-group col-md-4 ">
 			         <label for="inputEmail4"><strong>Fecha de nacimiento</strong></label>
 			         <input required type="date" class="form-control" id="inputEmail4" placeholder="" name="direccion">
 			       </div>
-                   <div class="form-group col-md-3 ">
+                   <div class="form-group col-md-4 ">
 			         <label for="inputEmail4"><strong>Correo</strong></label>
 			         <input required type="email" class="form-control" id="inputEmail4" placeholder="" name="direccion">
 			       </div>
-                   <div class="form-group col-md-3 ">
+                   <div class="form-group col-md-4 ">
 			         <label for="inputEmail4"><strong>Contraseña</strong></label>
 			         <input required type="text" class="form-control" id="inputEmail4" placeholder="" name="direccion">
 			       </div>
-                   <div class="form-group col-md-3 ">
+                   <div class="form-group col-md-4 ">
 			         <label for="inputEmail4"><strong>Rol</strong></label>
 			         <input required type="text" class="form-control" id="inputEmail4" placeholder="" name="direccion">
 			       </div>
