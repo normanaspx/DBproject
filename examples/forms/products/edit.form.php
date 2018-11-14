@@ -69,7 +69,7 @@
 			       </div>
 				  <div class="form-group col-md-3">
 				    <label for="inputPassword4"> <strong>Precio</strong></label>
-				    <input type="text" class="form-control" id="inputPassword4" placeholder="" name="price" value=<?php echo $precio; ?>>
+				    <input type="number" class="form-control" id="inputPassword4" placeholder="" name="price" value=<?php echo $precio; ?>>
 				  </div>
 				  <div class="form-group col-md-3">
 				    <label for="inputPassword4"> <strong>Proveedor</strong></label>

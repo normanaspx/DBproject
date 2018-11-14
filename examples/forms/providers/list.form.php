@@ -16,7 +16,7 @@
 			 Nombre
 		    </th>
 		    <th>
-			 Ubicación
+			 Dirección
 		    </th>
 		    <th>
 			 Acciones
@@ -38,7 +38,7 @@
 						echo "<tr>
 			 					<td>". $fila['NOMBRE']. "</td>
 			 					<td>" .$fila['UBICACION']. "</td>
-								<td><a href=\"#\">Editar</a></td>
+								<td><a href=\"providers.edit.php\">Editar</a></td>
 								<td><a href=\"#\">Eliminar</a></td>
 			 				</tr>";
 					}

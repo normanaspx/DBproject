@@ -18,7 +18,7 @@
 
 		<!-- Forms -->
 		<div class="content">
-			<?php include('forms/usuarios/list.form.php'); ?>
+			<?php include('forms/providers/edit.form.php'); ?>
 		</div>
 
 		<!-- Footer -->

@@ -49,7 +49,7 @@
 		</a>
 	   </li>
 	   <li>
-		<a href="#">
+		<a href="./usuarios.list.php">
 		  <i class="now-ui-icons users_circle-08"></i>
 		  <p><strong>Usuarios</strong> </p>
 		</a>
