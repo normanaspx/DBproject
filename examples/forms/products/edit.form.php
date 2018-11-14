@@ -54,8 +54,6 @@
 				<p><strong>Cancelar</strong></p>
 			</a>
 			<h3 class="title">Editar producto</h3>
-
-		     <h1><?php echo (string)$editar ?></h1>
 		</div>
 	 	<div class="container">
 			<!-- Para el grid: https://getbootstrap.com/docs/4.1/components/forms/#layout -->
@@ -81,9 +79,6 @@
 				    </div>
 				  </div>
 			     </div>
-				<div class="">
-					<input type="text" name="" id="id_prov" value=<?php echo $id;  ?>>
-				</div>
 				<div class="form-row" style="float:center;">
 					<button class="btn" type="submit" name="button">Actualizar</button>
 				</div>
