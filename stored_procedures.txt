@@ -23,3 +23,20 @@ COMMENT 'lista productos'
 NOT DETERMINISTIC MODIFIES SQL DATA SQL SECURITY DEFINER
 SELECT * FROM  producto
 ---------------------------------------
+/* PARA HACER INSERT*/
+
+CREATE PROCEDURE `AddCustomers`(IN `nombres` VARCHAR(50), IN `apellidos` VARCHAR(50), IN `direccion` VARCHAR(50), IN `nit` VARCHAR(50))
+COMMENT 'Agrega clientes'
+NOT DETERMINISTIC MODIFIES SQL DATA SQL SECURITY DEFINER
+INSERT INTO cliente VALUES(null, nombres, apellidos, direccion, nit)
+
+
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `EditProduct`(IN `nombre` VARCHAR(50), IN `descripcion` VARCHAR(50), IN `precio` INT, IN `id_proveedor` INT, IN `id` INT)
+COMMENT 'edita productos' NOT DETERMINISTIC MODIFIES SQL DATA SQL SECURITY DEFINER
+UPDATE producto set NOMBRE=nombre, DESCRIPCION=descripcion, precio=precio, ID_PROVEEDOR=id_proveedor where id_producto=id
+
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `EditProduct`(IN `nombre` VARCHAR(50), IN `descripcion` VARCHAR(50), IN `precio` INT, IN `id_proveedor` INT, IN `id` INT)
+COMMENT 'edita productos' NOT DETERMINISTIC MODIFIES SQL DATA SQL SECURITY DEFINER
+UPDATE producto set NOMBRE=nombre, DESCRIPCION=descripcion, precio=precio, ID_PROVEEDOR=id_proveedor where id_producto=id

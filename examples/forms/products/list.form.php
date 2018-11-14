@@ -38,11 +38,12 @@
 		 		  while($fila){
 		 			$fila = mysqli_fetch_array($resultado);
 		 			if($fila['NOMBRE']!=''){
+						$id=$fila['ID_PRODUCTO'];
 						echo "<tr>
 			 					<td>". $fila['NOMBRE']. "</td>
 			 					<td>" .$fila['DESCRIPCION']. "</td>
 			 					<td>Q". $fila['PRECIO']. "</td>
-								<td><a href=\"#\">Editar</a></td>
+								<td><a href=\"products.edit.php?editar=$id\">Editar</a></td>
 								<td><a href=\"#\">Eliminar</a></td>
 			 				</tr>";
 					}
