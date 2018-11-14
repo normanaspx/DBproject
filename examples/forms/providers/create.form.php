@@ -5,9 +5,9 @@
 		//la redireccion no la ha agregado aun solo cuando crea no cambia de vista probalo asi nada mas.
 	include'connection.php';
 	if(isset($_POST['button'])){
-		$description=$_POST['description'];
-		$ubicacion=$_POST['ubicacion'];
-		$insert = "CALL `AddBodegas`('". $description ."', '". $ubicacion ."')";
+        $nombre=$_POST['nombre'];
+        $direccion=$_POST['direccion'];
+		$insert = "CALL `AddProveedores`('". $nombre ."', '". $direccion ."')";
 		$resultado = mysqli_query($conector, $insert);
 		mysqli_close($conector);
 	}
@@ -16,12 +16,12 @@
   <div class="col-md-12">
     <div class="card">
 		<div class="card-header">
-			<a style="float:right; text-align:center; font-size:20px;" href="bodega.list.php">
+			<a style="float:right; text-align:center; font-size:20px;" href="providers.list.php">
 				<i class="now-ui-icons arrows-1_minimal-left"></i>
 				<p><strong>Cancelar</strong></p>
 				
 			</a>
-			<h3 class="title">Agregar bodega</h3>
+			<h3 class="title">Agregar Proveedor</h3>
 		</div>
 	 	<div class="container">
 			 <br><br>
@@ -29,12 +29,12 @@
 			<form method="post">
 				<div class="form-row">
 				  <div class="form-group col-md-3">
-				    <label  for="inputPassword4"> <strong>Descripción</strong></label>
-				    <input  required type="text" class="form-control" id="inputPassword4" placeholder="" name="description">
+				    <label for="inputPassword4"> <strong>Nombre</strong></label>
+				    <input required type="text" class="form-control" id="inputPassword4" placeholder="" name="nombre">
 					</div>
-					<div class="form-group col-md-3 ">
-			         <label for="inputEmail4"><strong>Ubicación</strong></label>
-			         <input required type="text" class="form-control" id="inputEmail4" placeholder="" name="ubicacion">
+                   <div class="form-group col-md-3 ">
+			         <label for="inputEmail4"><strong>Dirección</strong></label>
+			         <input required type="text" class="form-control" id="inputEmail4" placeholder="" name="direccion">
 			       </div>
 			 </div> 
 			 <div class="form-row" style="float:center;">

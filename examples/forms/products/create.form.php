@@ -26,25 +26,25 @@
 				<div class="form-row">
 			       <div class="form-group col-md-6">
 			         <label for="inputEmail4"> <strong>Nombre</strong></label>
-			         <input type="text" class="form-control" id="inputEmail4" placeholder="" name="name">
+			         <input required type="text" class="form-control" id="inputEmail4" placeholder="" name="name">
 			       </div>
 			       <div class="form-group col-md-6">
 			         <label for="inputPassword4"> <strong>Descripcion</strong></label>
-			         <input type="text" class="form-control" id="inputPassword4" placeholder="" name="description">
+			         <input required type="text" class="form-control" id="inputPassword4" placeholder="" name="description">
 			       </div>
 			     </div>
 				<div class="form-row">
 					<div class="form-group col-md-6">
 					  <label for="inputPassword4"> <strong>Precio</strong></label>
-					  <input type="text" class="form-control" id="inputPassword4" placeholder=""name="price">
+					  <input required type="number" class="form-control" id="inputPassword4" placeholder=""name="price">
 					</div>
 				  <div class="form-group col-md-6">
-				    <label for="inputPassword4"> <strong>Proveedor</strong></label>
-				    <input type="text" class="form-control" id="inputPassword4" placeholder="" name="provider">
+				    <label for="inputPassword4"> <strong>Id_Proveedor</strong></label>
+				    <input required type="number" class="form-control" id="inputPassword4" placeholder="" name="provider">
 				  </div>
 				</div>
 				<div class="form-row" style="float:center;">
-					<a href="products.list.php" class="btn" type="submit" name="button">Grabar</a>
+				<button class="btn" type="submit" name="button">Guardar</button>
 				</div>
 			</form>
 			<br>
