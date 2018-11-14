@@ -30,7 +30,7 @@
 		  </thead>
 		  <tbody>
 		 <?php
-			 	include'connection.php';
+		 	include'connection.php';
 	 		$querySelect = "CALL `GetAllProducts`()";
 	 		$resultado = mysqli_query($conector, $querySelect);
 	 		if($resultado) {
