@@ -7,10 +7,10 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" id="j">
 	     <div class="container">
 	     	<div class="row">
-				<input type="text" name="" value="" placeholder="Ingrese NIT" id="searchBox" class="form-control">
+				<input type="text" name="nit" value="" placeholder="Ingrese NIT" id="searchBox" class="form-control">
 				<div id="response"></div>
 	     	</div>
 	     </div>
