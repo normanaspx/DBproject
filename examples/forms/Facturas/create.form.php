@@ -15,15 +15,15 @@
 			<div class="form-row"  id="c">
 			   <div class="form-group col-md-4">
 				 <label for="inputPassword4"> <strong>Numero de serie</strong></label>
-				 <input type="text" name="numeroSerie" class="form-control" id="inputPassword4" placeholder="A18">
+				 <input type="text" name="numeroSerie" class="form-control" id="inputPassword4" placeholder="A18" required>
 			   </div>
 			   <div class="form-group col-md-4">
 				 <label for="inputPassword4"> <strong>Fecha</strong></label>
-				 <input type="date" class="form-control" id="inputDate" placeholder="" name="fecha">
+				 <input type="date" class="form-control" id="inputDate" placeholder="" name="fecha"  required>
 			   </div>
 			   <div class="form-group col-md-4 ">
 				 <label for="productsBox"><strong>Bodega</strong></label>
-				 <input type="text" name="bodega" class="form-control" placeholder="" id="productsBox">
+				 <input type="text" name="bodega" class="form-control" placeholder="" id="productsBox"  required>
 				 <div id="responseProd"></div>
 			   </div>
 			</div>
@@ -43,19 +43,19 @@
 			<div class="form-row" id="values">
 				<div class="form-group col-md-3">
 				   <label for="name"><strong>Nombre</strong></label>
-				   <input type="text"  name="nombre" id="nombre"  class="form-control"  >
+				   <input type="text"  name="nombre" id="nombre"  class="form-control" required readonly >
 				</div>
 				<div class="form-group col-md-3">
 				   <label for="name"><strong>Apellidos</strong></label>
-				   <input type="text"  name="apellido" id="ape"  class="form-control"  >
+				   <input type="text"  name="apellido" id="ape"  class="form-control" required  readonly>
 				</div>
 				<div class="form-group col-md-3">
 				   <label for="name"><strong>Direccion</strong></label>
-				   <input type="text"  name="direccion" id="direccion"  class="form-control"  >
+				   <input type="text"  name="direccion" id="direccion"  class="form-control" required  readonly>
 				</div>
 			   <div class="form-group col-md-3">
 				 <label for="nit"><strong>Nit</strong></label>
-				 <input type="text" name="nit" class="form-control" id="nit" placeholder="" readonly>
+				 <input type="text" name="nit" class="form-control" id="nit" placeholder="" readonly required>
 			   </div>
 			</div>
 			<hr>

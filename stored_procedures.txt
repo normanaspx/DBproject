@@ -42,13 +42,36 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `EditProduct`(IN `nombre` VARCHAR(50
 COMMENT 'edita productos' NOT DETERMINISTIC MODIFIES SQL DATA SQL SECURITY DEFINER
 UPDATE producto set NOMBRE=nombre, DESCRIPCION=descripcion, precio=precio, ID_PROVEEDOR=id_proveedor where id_producto=id
 =======
-CREATE PROCEDURE `AddProveedores`(IN `nombre` VARCHAR(50), IN `ubicacion` VARCHAR(50)) 
-COMMENT 'Agrega proveedores' 
-NOT DETERMINISTIC MODIFIES SQL DATA SQL SECURITY DEFINER 
+CREATE PROCEDURE `AddProveedores`(IN `nombre` VARCHAR(50), IN `ubicacion` VARCHAR(50))
+COMMENT 'Agrega proveedores'
+NOT DETERMINISTIC MODIFIES SQL DATA SQL SECURITY DEFINER
 INSERT INTO proveedor VALUES(null, nombre, ubicacion)
 
-CREATE PROCEDURE `AddEntrada`(IN `descripcion` VARCHAR(50), IN `cantidad` INT(11), IN `id_producto` INT(11), IN `id_bodega` INT(11)) 
-COMMENT 'Agrega boleta_entrada' 
-NOT DETERMINISTIC MODIFIES SQL DATA SQL SECURITY DEFINER 
+CREATE PROCEDURE `AddEntrada`(IN `descripcion` VARCHAR(50), IN `cantidad` INT(11), IN `id_producto` INT(11), IN `id_bodega` INT(11))
+COMMENT 'Agrega boleta_entrada'
+NOT DETERMINISTIC MODIFIES SQL DATA SQL SECURITY DEFINER
 INSERT INTO boleta_entrada VALUES(null, descripcion, cantidad, id_producto, id_bodega)
 >>>>>>> 13cf00cedffff925735066cc8349a1d619be5c77
+---------------------------------------------------------------------------
+CREATE DEFINER=`root`@`localhost` PROCEDURE `EditBodega`(IN `descripcion` VARCHAR(50), IN `ubicacion` VARCHAR(50), IN `id` INT)
+COMMENT 'edita bodegas' NOT DETERMINISTIC MODIFIES SQL DATA SQL SECURITY DEFINER
+UPDATE bodega set DESCRIPCION=descripcion, UBICACION=ubicacion WHERE ID_BODEGA=id
+--------------------------------------------------------------------------------------
+CREATE DEFINER=`root`@`localhost` PROCEDURE `AddPersona`(IN `nombres` VARCHAR(50), IN `apellidos` VARCHAR(50), IN `fechaNac` DATE)
+COMMENT 'Agrega usuarios' NOT DETERMINISTIC MODIFIES SQL DATA SQL SECURITY DEFINER
+INSERT INTO persona VALUES(null, nombres, apellidos, fechaNac)
+---------------------------------------------------------------------------------------
+CREATE PROCEDURE `AddUsers`(IN `persona` int, IN `correo` VARCHAR(50), IN `pass` VARCHAR(50), IN `rol` int)
+COMMENT 'Agrega usuarios' NOT DETERMINISTIC MODIFIES SQL DATA SQL SECURITY DEFINER
+INSERT INTO usuario VALUES(null, persona, correo, pass, now(), rol)
+--------------------------------------
+
+CREATE PROCEDURE `GetAllUsers`()
+COMMENT 'lista productos'
+NOT DETERMINISTIC MODIFIES SQL DATA SQL SECURITY DEFINER
+SELECT nombres, apellidos, correo, descripcion FROM persona, usuario, ROL
+where usuario.ID_ROL=rol.ID_ROL and rol.ID_ROl and persona.ID_PERSONA=usuario.ID_PERSONA
+---------------------------------------------------------------
+CREATE PROCEDURE `AddEntradas`(IN `descripcion` int, IN `cantidad` int, IN `prod` int, IN `bodega` int)
+COMMENT 'Agrega entradas' NOT DETERMINISTIC MODIFIES SQL DATA SQL SECURITY DEFINER
+INSERT INTO entradas VALUES(null, descripcion, cantidad, prod, bodega)

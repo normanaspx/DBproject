@@ -27,13 +27,10 @@
 		  </div>
 	    </form>
 	    <ul class="navbar-nav">
-		  <li class="nav-item">
-			<a class="nav-link">
-			   <i class="now-ui-icons media-2_sound-wave"></i>
-			   <p>
-				 <span class="d-lg-none d-md-block">Stats</span>
-			   </p>
-			</a>
+		    <li class="nav-item" style="cursor:pointer;">
+	 		<a class="nav-link" href="logout.php"><strong>Desconectar</strong>
+	 		</a>
+	 	   </li>
 		  </li>
 		  <li class="nav-item dropdown">
 			<a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

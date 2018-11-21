@@ -61,11 +61,11 @@
 				<div class="form-row">
 			       <div class="form-group col-md-3">
 			         <label for="inputEmail4"> <strong>Nombre</strong></label>
-			         <input type="text" class="form-control" name="name" value=<?php echo $nombre; ?> id="inputEmail4" placeholder="">
+			         <input type="text" class="form-control" name="name" value="<?php echo $nombre; ?>" id="inputEmail4" placeholder="">
 			       </div>
 			       <div class="form-group col-md-3">
 			         <label for="inputPassword4"> <strong>Descripcion</strong></label>
-			         <input type="text" class="form-control" id="inputPassword4" name="description" placeholder="" value=<?php echo $desc; ?>>
+			         <input type="text" class="form-control" id="inputPassword4" name="description" placeholder="" value="<?php echo $desc; ?>">
 			       </div>
 				  <div class="form-group col-md-3">
 				    <label for="inputPassword4"> <strong>Precio</strong></label>
@@ -73,7 +73,7 @@
 				  </div>
 				  <div class="form-group col-md-3">
 				    <label for="inputPassword4"> <strong>Proveedor</strong></label>
-				    <input type="text" class="form-control" id="searchBox" placeholder="Nombre..." name="provider" value=<?php echo $provider; ?>>
+				    <input type="text" class="form-control" id="searchBox" placeholder="Nombre..." name="provider" value="<?php echo $provider; ?>">
 				    <div id="response">
 
 				    </div>

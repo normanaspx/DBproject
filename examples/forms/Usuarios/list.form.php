@@ -19,45 +19,40 @@
 			 Apellido
 		    </th>
 		    <th>
-			 Fecha de nacimiento
-		    </th>
-		    <th>
 			 Correo
 		    </th>
-				<th>
-			 Contraseña
-		    </th>
-				<th>
+			<th>
 			 Rol
 		    </th>
 		  </thead>
 		  <tbody>
-			
-		 <?php
-			 	/*include'connection.php';
-	 		$querySelect = "select * from usuario";
-	 		$resultado = mysqli_query($conector, $querySelect);
-	 		if($resultado) {
-		 		$fila = " ";
-		 		  while($fila){
-		 			$fila = mysqli_fetch_array($resultado);
-		 			if($fila['NOMBRE']!=''){
-						echo "<tr>
-			 					 <td>". $fila['NOMBRE']. "</td>
-								 <td>" .$fila['APELLIDO']. "</td>
-								 <td>". $fila['FECHA_NACIMIENTO']. "</td>
-			 					<td>" .$fila['CORREO']. "</td>
-								<td><a href=\"providers.edit.php\">Editar</a></td>
-								<td><a href=\"#\">Eliminar</a></td>
-			 				</tr>";
-					}
-		 		  }
-	 			mysqli_close($conector);
-	 		}else
-			 {
-	 			mysqli_close($conector);
-	 		}*/
-		?>
+
+			  <?php
+	 		 	include'connection.php';
+	 	 		$querySelect = "CALL `GetAllUsers`()";
+	 	 		$resultado = mysqli_query($conector, $querySelect);
+	 	 		if($resultado) {
+	 		 		$fila = " ";
+	 		 		  while($fila){
+	 		 			$fila = mysqli_fetch_array($resultado);
+	 		 			if($fila['NOMBRES']!=''){
+	 						$id=$fila['ID_USUARIO'];
+	 						echo "<tr>
+	 			 					<td>". $fila['NOMBRES']. "</td>
+	 			 					<td>" .$fila['APELLIDOS']. "</td>
+	 								<td>". $fila['CORREO']. "</td>
+	 								<td>". $fila['DESCRIPCION']. "</td>
+	 								<td><a href=\"products.edit.php?editar=$id\">Editar</a></td>
+	 								<td><a href=\"#\">Eliminar</a></td>
+	 			 				</tr>";
+	 					}
+	 		 		  }
+	 	 			mysqli_close($conector);
+	 	 		}else
+	 			 {
+	 	 			mysqli_close($conector);
+	 	 		}
+	 		?>
 		  </tbody>
 		</table>
 	   </div>

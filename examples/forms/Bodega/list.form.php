@@ -12,9 +12,6 @@
 	   <div class="table-responsive">
 		<table class="table">
 		  <thead class=" text-primary">
-			<th>
-			 Bodega
-		    </th>
 				<th>
 			 Descripcion
 		    </th>
@@ -40,11 +37,11 @@
 				 		  while($fila){
 				 			$fila = mysqli_fetch_array($resultado);
 				 			if($fila['DESCRIPCION']!=''){
+								$id=$fila['ID_BODEGA'];
 								echo "<tr>
-										<td>" .$fila['ID_BODEGA']. "</td>
 					 					<td>" .$fila['DESCRIPCION']. "</td>
 					 					<td>". $fila['UBICACION']. "</td>
-										<td><a href=\"bodega.edit.php\">Editar</a></td>
+										<td><a href=\"bodega.edit.php?editar=$id\">Editar</a></td>
 										<td><a href=\"#\">Eliminar</a></td>
 					 				</tr>";
 							}

@@ -1,5 +1,4 @@
 <?php
-	//Header html
 	include'header.php';
 	if(isset($_POST['search'])){
 	  $response = "<ul><li>No existe</li></ul>";

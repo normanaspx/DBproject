@@ -5,11 +5,27 @@
 		$description=$_POST['description'];
 		$price=$_POST['price'];
 		$provider=$_POST['provider'];
-		$insert = "CALL `AddProducts`('". $name ."', '". $description ."', '$price' , '$provider')";
+		$select="SELECT ID_PROVEEDOR FROM PROVEEDOR WHERE NOMBRE='" .$provider. "' ";
+		$resultado = mysqli_query($conector, $select);
+		if($resultado) {
+			$fila = " ";
+			  while($fila){
+				$fila = mysqli_fetch_array($resultado);
+				if($fila['ID_PROVEEDOR']!=''){
+					$id_proveedor=$fila['ID_PROVEEDOR'];
+				}
+			 }
+		}
+		$insert = "CALL `AddProducts`('". $name ."', '". $description ."', '$price' , '$id_proveedor')";
 		$resultado = mysqli_query($conector, $insert);
 		mysqli_close($conector);
+		echo" <script type=\"text/javascript\">
+		 	 document.location.href=\"products.list.php\";
+		 </script>";
+
 	}
  ?>
+
 <div class="row">
   <div class="col-md-12">
     <div class="card">
@@ -38,9 +54,10 @@
 					  <label for="inputPassword4"> <strong>Precio</strong></label>
 					  <input required type="number" class="form-control" id="inputPassword4" placeholder=""name="price">
 					</div>
-				  <div class="form-group col-md-6">
-				    <label for="inputPassword4"> <strong>Id_Proveedor</strong></label>
-				    <input required type="number" class="form-control" id="inputPassword4" placeholder="" name="provider">
+				  <div class="form-group col-md-6" id="j">
+				    <label for="proveedor"> <strong>Proveedor</strong></label>
+				    <input required type="text" class="form-control" id="proveedor" placeholder="" name="provider">
+				    <div id="response"></div>
 				  </div>
 				</div>
 				<div class="form-row" style="float:center;">

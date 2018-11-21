@@ -21,7 +21,7 @@
 			<a style="float:right; text-align:center; font-size:20px;" href="entradas.list.php">
 				<i class="now-ui-icons arrows-1_minimal-left"></i>
 				<p><strong>Cancelar</strong></p>
-				
+
 			</a>
 			<h3 class="title">Agregar Entrada</h3>
 		</div>
@@ -39,25 +39,25 @@
 			         <input required type="number" class="form-control" id="inputEmail4" placeholder="" name="cantidad">
 			       </div>
                    <div class="form-group col-md-3 ">
-			         <label for="inputEmail4"><strong>Id_producto</strong></label>
+			         <label for="inputEmail4"><strong>Producto</strong></label>
 			         <input required type="number" class="form-control" id="inputEmail4" placeholder="" name="id_producto">
 			       </div>
                    <div class="form-group col-md-3 ">
-			         <label for="inputEmail4"><strong>Id_bodega</strong></label>
+			         <label for="inputEmail4"><strong>Bodega</strong></label>
 			         <input required type="number" class="form-control" id="inputEmail4" placeholder="" name="id_bodega">
 			       </div>
-			 </div> 
+			 </div>
 
 			 <a class="form-row" style="float:center;" href="./entradas.list.php">
 					<button class="btn" type="submit" name="button">Guardar</button>
 			</a>
 
 			</form>
-			
-			
+
+
 			<br>
 	 	</div>
-	 </div>	
+	 </div>
     </div>
   </div>
 </div>

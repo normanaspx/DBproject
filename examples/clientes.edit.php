@@ -1,6 +1,5 @@
 <?php
-	//Header html
-	include'header.php';
+     include'header.php';
 ?>
 <body class="user-profile">
 <div class="wrapper ">

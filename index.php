@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-	<title>Login V2</title>
+	<title>ACME</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
@@ -32,7 +32,7 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form method="post" class="login100-form validate-form" action="examples/index.php">
+				<form method="post" class="login100-form validate-form" action="check.php">
 					<span class="login100-form-title p-b-26">
 						Acme
 					</span>
@@ -41,16 +41,16 @@
 					</span>
 
 					<div class="wrap-input100 validate-input">
-						<input class="input100" type="text" name="email">
-						<span class="focus-input100" data-placeholder="Correo"></span>
+						<input class="input100" type="text" name="email" placeholder="Correo">
+						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" >
 						<span class="btn-show-pass">
 							<i class="zmdi zmdi-eye"></i>
 						</span>
-						<input class="input100" type="password" name="pass">
-						<span class="focus-input100" data-placeholder="Password"></span>
+						<input class="input100" type="password" name="pass" placeholder="Contraseña">
+						<span class="focus-input100" ></span>
 					</div>
 
 					<div class="container-login100-form-btn">
@@ -61,16 +61,6 @@
 							</button>
 						</div>
 					</div>
-
-				<!--	<div class="text-center p-t-115">
-						<span class="txt1">
-							Don’t have an account?
-						</span>
-
-						<a class="txt2" href="#">
-							Sign Up
-						</a>
-					</div>-->
 				</form>
 			</div>
 		</div>
